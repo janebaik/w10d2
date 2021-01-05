@@ -46,15 +46,12 @@ class Clock extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.intervalID = setInterval(this.tick, 1000);
-        // debugger
+        
     }
 
-    componentWillUnmount() {
-        debugger
+    componentWillUnmount() {  
         clearInterval(this.intervalID);
-        debugger
     }
 
 }
