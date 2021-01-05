@@ -21,5 +21,13 @@
   },
   "devDependencies": {
     "webpack-cli": "^4.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janebaik/w10d2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/janebaik/w10d2/issues"
+  },
+  "homepage": "https://github.com/janebaik/w10d2#readme"
 }
