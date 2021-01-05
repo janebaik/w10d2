@@ -10,9 +10,24 @@ class Clock extends React.Component {
     }
 
     render() {
+
+        let hours = this.state.time.getHours();
+        let minutes = this.state.time.getMinutes();
+        let seconds = this.state.time.getSeconds();
+
+        let date = this.state.time.toDateString();
+
         return (
-            <div>
+            <div className='time'>
                 <h1>Clock</h1>
+                <h1>Time:</h1>
+                <div>
+                    {hours}:{minutes}:{seconds} PDT
+                </div>
+                <h1>Date:</h1>
+                <div>
+                    {date}
+                </div>
             </div>
         )
     }
@@ -22,15 +37,15 @@ class Clock extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
+        debugger
         this.intervalID = setInterval(this.tick, 1000);
         // debugger
     }
 
     componentWillUnmount() {
-        // debugger
+        debugger
         clearInterval(this.intervalID);
-        // debugger
+        debugger
     }
 
 }
