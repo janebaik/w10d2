@@ -17,16 +17,25 @@ class Clock extends React.Component {
 
         let date = this.state.time.toDateString();
 
+        seconds = (seconds<10) ? `0${seconds}` : seconds;
+        minutes = (minutes < 10) ? `0${minutes}` : minutes;
+
         return (
             <div className='time'>
-                <h1>Clock</h1>
-                <h1>Time:</h1>
-                <div>
-                    {hours}:{minutes}:{seconds} PDT
-                </div>
-                <h1>Date:</h1>
-                <div>
-                    {date}
+                <h1 className="clock-title">Clock</h1>
+                <div className='box-time'>
+                    <div className='boxed-time'>
+                        <h1>Time:</h1>
+                        <div>
+                            {hours}:{minutes}:{seconds} PDT
+                        </div>
+                    </div>
+                    <div className='boxed-time'>
+                        <h1>Date:</h1>
+                        <div>
+                            {date}
+                        </div>
+                    </div>
                 </div>
             </div>
         )
